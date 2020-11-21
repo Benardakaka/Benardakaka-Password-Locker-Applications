@@ -129,7 +129,7 @@ class Credentials:
 
 if __name__ == "__main__":
     isTrue = True
-    print(" This is a python application that manages our passwords and even create new passwords for us.")
+    print("This is a python application that manages our passwords and even create new passwords for us.")
 
     while isTrue == True:
         print(

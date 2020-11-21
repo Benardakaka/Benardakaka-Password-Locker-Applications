@@ -219,8 +219,7 @@ if __name__ == "__main__":
                     accountName = credential.accountName
                     accountuser = credential.accountUsername
                     accountpass = credential.accountPassword
-                    print(
-                        f"Account Name : {accountName}\n Account Username : {accountuser}\n Account Password: {accountpass}\n")
+                    print(f"Account Name : {accountName}\n Account Username : {accountuser}\n Account Password: {accountpass}\n")
             else:
                 print("You do not have saved credentials at the moment\n")
         elif shortCode == 'see.acc':

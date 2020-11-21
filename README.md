@@ -38,7 +38,9 @@ Link:-> ```https://github.com/Benardakaka/Password-Locker* Passwordlocker```
 
 4. If you have all the Pre-requisites you can run the application.
 
-### Pre-requisites
+### Technologies and Pre-requisites
+
+* [Python3.6]
 
 **What you need to install the application and how to install them.**
 

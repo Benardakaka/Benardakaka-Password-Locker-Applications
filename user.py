@@ -2,7 +2,6 @@ import random
 import string
 import pyperclip
 
-
 class User:
     userList = []
 
@@ -11,7 +10,7 @@ class User:
         self.password = password
         self.isLoggedin = False
 
-    def createUser(self,user_name, password):
+    def createUser(self, user_name, password):
         """
         method to create new user account
         """
@@ -74,7 +73,7 @@ class Credentials:
             accountName, accountUsername, accountPassword)
         return newCredential
 
-    def searchCredential(self,accountName):
+    def searchCredential(self, accountName):
         """
         method that searches a new credential and returns the credential
         """
@@ -106,7 +105,7 @@ class Credentials:
         else:
             print("No credentials saved")
 
-    def deleteCredential(self,accountName):
+    def deleteCredential(self, accountName):
         """
         method that deletes a credential
         """
@@ -114,14 +113,14 @@ class Credentials:
             if credential.accountUsername == accountName:
                 Credentials.credentials.remove(credential)
 
-    def passwordGenerate(self,stringLength=8):
+    def passwordGenerate(self, stringLength=8):
         """
         method that generate a random password
         """
         password = string.ascii_lowercase + string.ascii_uppercase + "#*%"
         return ''.join(random.choice(password) for i in range(int(stringLength)))
 
-    def copypassword(self,parameter_list):
+    def copypassword(self, parameter_list):
         """
         method that allows copying of password to keyboard
         """
@@ -134,9 +133,9 @@ if __name__ == "__main__":
 
     while isTrue == True:
         print(
-            "Use these short code to proceed:\n\n 1. g.acc-Create new Account\n 2. login-Login\n 3. ext-Exit")
+            "Use these short code to proceed:\n\n 1. gn.acc-Create new Account\n 2. login-Login\n 3. ext-Exit")
         shortCode = input().lower()
-        if shortCode == 'g.acc':
+        if shortCode == 'gn.acc':
             print("New Account")
             print("Username")
             user_name = input()
@@ -152,7 +151,7 @@ if __name__ == "__main__":
                     password = Credentials.passwordGenerate()
                     break
                 else:
-                    print("PasswordOption Invalid")
+                    print("PasswordOption Incorrect")
             createUser = User.createUser(user_name, password)
             User.saveUser(createUser)
             print("\n")
@@ -179,10 +178,10 @@ if __name__ == "__main__":
                     break
             break
         elif shortCode == 'ext':
-            print("Bye. See you some other time.")
+            print("see next time")
             break
         else:
-            print("Invalid shortcode\n")
+            print("Incorrect shortcode\n")
     while True:
         print("What would like to do?\n\n Use these shortcodes to go on:\n 1. sav - Save new Credential \n 2. shw - Display existing Credential\n 3. see.acc - Find a credential \n 4. del.acc -  Delete an existing Credential \n 5. ext - Exit Application")
         shortCode = input().lower()

@@ -1,7 +1,8 @@
 import unittest
-from user import User
+from user import user
 from user import Credentials
 import pyperclip
+
 class TestUser(unittest.TestCase):
     def setUp(self):
         '''
@@ -80,11 +81,11 @@ class TestUser(unittest.TestCase):
         """
         search a credential
         """
-        self.cred.searchCredential()
+        self.credential.searchCredential()
         test_cred = Credentials("Facebook", "Bena", 2030)
         test_cred.searchCredential()
         found = Credentials.searchCredential("Facebook")
-        self.assertEqual(found.accountName, test_cred.accountName)
+        self.assertEqual(founaccountNamed., test_cred.accountName)
     def test_display(self):
         """
         method to test if credentials can be displayed

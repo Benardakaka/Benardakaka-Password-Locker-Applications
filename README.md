@@ -30,7 +30,7 @@ As a user of the terminal application you will be able to:
 8. Delete a saved credential
 
 
-Link:-> ```https://github.com/Benardakaka/Password-Locker* Passwordlocker```
+Link:-> ```https://github.com/Benardakaka/Password-Locker-Application* Passwordlocker```
 
 2. Clone the project.
 
@@ -85,3 +85,4 @@ The app will open on terminal
 ### License
 
 * LICENSED UNDER  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](license/MIT)
+* Copyright &copy;[Benard Akaka] 

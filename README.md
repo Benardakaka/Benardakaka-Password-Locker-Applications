@@ -4,7 +4,8 @@
 
 ## Description
 
-This project is a python application that manages our passwords and even generate new passwords for us.
+This is a python application that manages our passwords and even create new passwords for us.
+
 
 
 ## User Stories
@@ -72,7 +73,7 @@ The app will open on terminal
 |Display all stored credentials | Enter ```ds```|A list of all credentials that has been stored or ```You don't have any credentials saved yet``` |
 |Search a stored credential based on account name|Enter ```acc```| Enter the Account Name you want to search for and returns the account details|
 |Delete an existing credential that you don't want anymore|Enter ```dc```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exist|
-|Exit the application| Enter ```ex```| The application bids you goodbye and exits|
+|Exit the application| Enter ```exit```| The application bids you goodbye and exits|
 
 ## Built With
 

@@ -1,55 +1,43 @@
 import random
 import string
 import pyperclip
-
 class User:
     userList = []
-
     def __init__(self, user_name, password):
         self.user_name = user_name
         self.password = password
         self.isLoggedin = False
-
-    def createUser(self, user_name, password):
+    def createUser(user_name, password):
         """
         method to create new user account
         """
         newUser = User(user_name, password)
         return newUser
-
     def login(self):
         """
         method that allows a user to login  credentials
         """
-        print("Congrat. proceed")
-
+        print("Hello,welcome to password-locker-application..")
     def saveUser(self):
         """
         method that adds user to the list
         """
         User.userList.append(self)
-
     @classmethod
     def displayUser(cls):
         """
         method that displays saved users
         """
         return cls.userList
-
     def deleteUser(self):
         """
         method that delete a selected user
         """
         User.userList.remove(self)
-
-
 if __name__ == "__main__":
     pass
-
-
 class Credentials:
     credentials = []
-
     def __init__(self, accountName, accountUsername, accountPassword):
         """
         crede
@@ -57,13 +45,11 @@ class Credentials:
         self.accountName = accountName
         self.accountUsername = accountUsername
         self.accountPassword = accountPassword
-
     def saveCredential(self):
         """
         method that adds credentials to the list
         """
         Credentials.credentials.append(self)
-
     @classmethod
     def createCredential(self, accountName, accountUsername, accountPassword):
         """
@@ -72,8 +58,7 @@ class Credentials:
         newCredential = Credentials(
             accountName, accountUsername, accountPassword)
         return newCredential
-
-    def searchCredential(self, accountName):
+    def searchCredential(accountName):
         """
         method that searches a new credential and returns the credential
         """
@@ -84,14 +69,12 @@ class Credentials:
             print("No such an account")
         else:
             print("No credentials saved")
-
-    def displayCredential(self):
+    def displayCredential():
         """
         methods to display all saved credentials
         """
         if (len(Credentials.credentials) > 0):
             return Credentials.credentials
-
     @classmethod
     def credentialExist(self, accountName):
         """
@@ -104,61 +87,57 @@ class Credentials:
             print("No such an account")
         else:
             print("No credentials saved")
-
-    def deleteCredential(self, accountName):
+    def deleteCredential(accountName):
         """
         method that deletes a credential
         """
         for credential in Credentials.credentials:
             if credential.accountUsername == accountName:
                 Credentials.credentials.remove(credential)
-
-    def passwordGenerate(self, stringLength=8):
+    def passwordGenerate(stringLength=8):
         """
         method that generate a random password
         """
         password = string.ascii_lowercase + string.ascii_uppercase + "#*%"
         return ''.join(random.choice(password) for i in range(int(stringLength)))
-
-    def copypassword(self, parameter_list):
+    def copypassword(parameter_list):
         """
         method that allows copying of password to keyboard
         """
         pass
-
-
 if __name__ == "__main__":
-    isTrue = True
-    print("This is a python application that manages our passwords and even create new passwords for us.")
 
+    isTrue = True
+    print("welcome again.This is a python application that manages our passwords and even create new passwords for us.")
     while isTrue == True:
         print(
-            "Use these short code to proceed:\n\n 1. gn.acc-Create new Account\n 2. login-Login\n 3. ext-Exit")
+            "Use these short code to proceed:\n\n 1. new-Create new Account\n 2. lgn-Login\n 3. ext-Exit")
         shortCode = input().lower()
-        if shortCode == 'gn.acc':
+        if shortCode == 'new':
             print("New Account")
+          
             print("Username")
             user_name = input()
             while True:
                 print(
-                    "1. gen - create your own password?\n 2. pck - System password")
+                    "1. my - own password?\n 2. ran - generate random password")
                 passwordOption = input()
-                if passwordOption == 'gen':
+                if passwordOption == 'my':
                     print("Your Password")
                     password = input()
                     break
-                elif passwordOption == 'pck':
+                elif passwordOption == 'ran':
                     password = Credentials.passwordGenerate()
                     break
                 else:
-                    print("PasswordOption Incorrect")
+                    print("PasswordOption Invalid")
             createUser = User.createUser(user_name, password)
             User.saveUser(createUser)
             print("\n")
             print(
-                f"Wow {user_name} Your Account is sucessfully created\n")
+                f"Hello {user_name} Your Account has been created sucessfully\n")
             print(f"Your username is {user_name} and password is {password}\n")
-        elif shortCode == 'login':
+        elif shortCode == 'lgn':
             print("*"*3)
             print("Enter your username and password")
             print("*"*10)
@@ -171,19 +150,19 @@ if __name__ == "__main__":
                     if user.password == password:
                         print(user.login())
                     else:
-                        print("password incorrect")
+                        print("password invalid")
                         break
                 else:
-                    print("username incorrect")
+                    print("username Invalid")
                     break
             break
         elif shortCode == 'ext':
-            print("see next time")
+            print("Goodbye. See you again!")
             break
         else:
-            print("Incorrect shortcode\n")
+            print("Invalid shortcode\n")
     while True:
-        print("What would like to do?\n\n Use these shortcodes to go on:\n 1. sav - Save new Credential \n 2. shw - Display existing Credential\n 3. see.acc - Find a credential \n 4. del.acc -  Delete an existing Credential \n 5. ext - Exit Application")
+        print("What would like to do?\n\n Use these shortcodes to proceed\n 1. sav - Save new Credential \n 2. show - Display existing Credential\n 3. see.acc - Find a credential \n 4. del.acc -  Delete an existing Credential \n 5. exit - Exit Application")
         shortCode = input().lower()
         if shortCode == 'sav':
             print("New Credential Account")
@@ -195,13 +174,13 @@ if __name__ == "__main__":
             accountUserName = input()
             while True:
                 print(
-                    "1. gen - You want to type your own password?\n 2. sytm -  generate random password")
+                    "1. my - You want to type your own password?\n 2. ran -  generate random password")
                 PasswordOption = input().lower()
-                if PasswordOption == 'gen':
+                if PasswordOption == 'my':
                     print("Account's Password :")
                     accountPassword = input()
                     break
-                elif PasswordOption == 'sytm':
+                elif PasswordOption == 'ran':
                     accountPassword = Credentials.passwordGenerate()
                     break
                 else:
@@ -212,6 +191,9 @@ if __name__ == "__main__":
             print("\n")
             print("Your Account's Credentials has been saved!")
             print("\n")
+            
+
+
         elif shortCode == 'shw':
             if Credentials.displayCredential():
                 print("List of your credentials include:\n")
@@ -219,7 +201,8 @@ if __name__ == "__main__":
                     accountName = credential.accountName
                     accountuser = credential.accountUsername
                     accountpass = credential.accountPassword
-                    print(f"Account Name : {accountName}\n Account Username : {accountuser}\n Account Password: {accountpass}\n")
+                    print(
+                        f"Account Name : {accountName}\n Account Username : {accountuser}\n Account Password: {accountpass}\n")
             else:
                 print("You do not have saved credentials at the moment\n")
         elif shortCode == 'see.acc':
@@ -243,4 +226,4 @@ if __name__ == "__main__":
             print("Welcome once again")
             isTrue = False
         else:
-            print("incorrect short code")
+            print("invalid short code")

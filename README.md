@@ -85,4 +85,4 @@ The app will open on terminal
 ### License
 
 * LICENSED UNDER  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](license/MIT)
-* Copyright &copy;[benardakaka484gmail.com][Benard Akaka] 
+* Copyright &copy;[Benard Akaka] 

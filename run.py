@@ -1,4 +1,5 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.6.9
+# python3 run.py
 import random
 import string
 import pyperclip

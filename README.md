@@ -30,7 +30,7 @@ As a user of the terminal application you will be able to:
 8. Delete a saved credential
 
 
- ```https://github.com/Benardakaka/Password-Locker-Application* Passwordlocker```
+ ```https://github.com/Benardakaka/Password-Locker-Application```
 
 2. Clone the project.
 

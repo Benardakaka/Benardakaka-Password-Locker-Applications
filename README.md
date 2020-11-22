@@ -71,7 +71,7 @@ The app will open on terminal
 |Open the application on the terminal | Run the command ```$ ./user.py```|Hello Welcome to your Password Locker... <br>* ```new```  Create New Account  ```lgn``` ---  Login |
 |Select  ```my```| input username and password ```my```----to type your own password,```ran```---- generated random password| Hello ```username```, Your account has been created succesfully! Your password is: ```password```|
 |Select log  | Enter your password and username you signed up with|  menu to help you navigate through the application|
-|Store a new credential in the application| Enter ```sav```|Enter Account's name, Accounts' username, Account's password<br>choose ```psswd``` to enter your password or ```gen``` for the application to generate a password for you |
+|Store a new credential in the application| Enter ```sav```|Enter Account's name, Accounts' username, Account's password<br>choose ```psswd``` to enter your password or ```new``` for the application to generate a password for you |
 |Display all stored credentials | Enter ```shw```|A list of all credentials that has been stored or ```You don't have any credentials saved yet``` |
 |Search a stored credential based on account name|Enter ```sav```| Enter the Account Name you want to search for and returns the account details|
 |Delete an existing credential that you don't want anymore|Enter ```del.acc```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exist|

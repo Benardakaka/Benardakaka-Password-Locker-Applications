@@ -68,8 +68,8 @@ The app will open on terminal
 ## Behaviour Driven Development
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-|Open the application on the terminal | Run the command ```$ ./user.py```|Hello Welcome to your Password Locker... <br>* cc ---  Create New Account * log ---  Login |
-|Select  cc| input username and password.cc----to type your own password,sg----system generated password| Hello ```username```, Your account has been created succesfully! Your password is: ```password```|
+|Open the application on the terminal | Run the command ```$ ./user.py```|Hello Welcome to your Password Locker... <br>* ```new```  Create New Account  ```lgn``` ---  Login |
+|Select  ```my```| input username and password ```my```----to type your own password,```ran```---- generated random password| Hello ```username```, Your account has been created succesfully! Your password is: ```password```|
 |Select log  | Enter your password and username you signed up with|  menu to help you navigate through the application|
 |Store a new credential in the application| Enter ```sav```|Enter Account's name, Accounts' username, Account's password<br>choose ```psswd``` to enter your password or ```gen``` for the application to generate a password for you |
 |Display all stored credentials | Enter ```shw```|A list of all credentials that has been stored or ```You don't have any credentials saved yet``` |

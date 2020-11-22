@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6.9
+#!/usr/bin/env python3.6
 ## python3.6 run.py
 import random
 import string

@@ -9,7 +9,7 @@ This is a python application that manages our passwords and even create new pass
 
 
 ## User Stories
-The user would like to.... :
+The user would like to.. :
 * Create an account for the application.
 * Store my existing acounts login details for various accounts that i have registered for.
 * Generate new password for an account that i haven't registered for and store it with the account name.   

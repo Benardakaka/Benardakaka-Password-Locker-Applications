@@ -100,7 +100,7 @@ class Credentials:
         """
         method that generate a random password
         """
-        password = string.ascii_lowercase + string.ascii_uppercase + "#*%"
+        password = string.ascii_lowercase + string.ascii_uppercase + "abcd*1245%"
         return ''.join(random.choice(password) for i in range(int(stringLength)))
     def copypassword(parameter_list):
         """
@@ -225,7 +225,7 @@ if __name__ == "__main__":
             else:
                 print("No such an account name")
         elif shortCode == 'ext':
-            print("Welcome once again")
+            print("Welcome once again.Goodluck")
             isTrue = False
         else:
             print("invalid short code")
